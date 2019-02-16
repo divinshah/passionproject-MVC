@@ -1,0 +1,50 @@
+﻿@model Passionprojectdivy.Models.Player
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Player</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlayerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayerPostion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlayerPostion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayerTeam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlayerTeam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayerRating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlayerRating)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.playerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

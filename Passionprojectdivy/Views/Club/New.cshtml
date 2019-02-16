@@ -1,0 +1,22 @@
+﻿@model Passionprojectdivy.Models.Club
+
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>Make a new club</h2>
+<form method="POST" action="/Club/Create">
+    <div class="inprow">
+        <label class="inplabel">Club Name</label>
+        <input id="Clubname_New" name="Clubname_New" />
+    </div>
+    
+    <div class="inprow">
+        <div class="inplabel">League Name</div>
+        <input id="League_New" name="League_New"/>
+    </div>
+    <div class="inprow">
+        <input type="submit" value="Submit" />
+    </div>
+</form>
+

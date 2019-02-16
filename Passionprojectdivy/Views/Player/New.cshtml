@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Passionprojectdivy.Models.Club>
+
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>New</h2>
+
+
+<h2>Make a new Player</h2>
+<form method="POST" action="/Player/Create">
+    <div class="inprow">
+        <label class="inplabel">Player Name</label>
+        <input id="Playername_New" name="Playername_New" />
+    </div>
+
+    <div class="inprow">
+        <div class="inplabel">Player Position</div>
+        <input id="Position_New" name="Position_New" />
+    </div>
+
+    <div class="inptrow">
+        
+        <div class="inplabel">Player Club</div>
+        <select id="PlayerClub_New" name="PlayerClub_New">
+            @foreach (var club in Model)
+            {
+                <option value="@club.clubID">@club.ClubName </option>
+            }
+        </select>
+        
+    </div>
+
+    <div class="inprow">
+        <div class="inplabel">Over all rating</div>
+        <input id="Rating_New" name="Rating_New" />
+    </div>
+
+    <div class="inprow">
+        <input type="submit" value="Submit" />
+    </div>
+</form>
+
